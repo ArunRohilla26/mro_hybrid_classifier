@@ -1,0 +1,7 @@
+﻿venv312/
+__pycache__/
+outputs/
+*.pyc
+*.pkl
+*.joblib
+.DS_Store

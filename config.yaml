@@ -1,0 +1,19 @@
+models:
+  embedding: all-MiniLM-L6-v2
+
+paths:
+  taxonomy_excel: data/MRO_Taxonomy_v4_Master.xlsx
+  taxonomy_sheet_name: ""
+
+thresholds:
+  stage1_high_conf: 0.85     # >= 0.85 -> accept Stage 1 result
+  stage1_low_conf: 0.50      # < 0.50 -> send to manual
+  stage2_override: 0.70      # if Stage 2 (LCPN) prob >= 0.70 -> can override
+
+classification:
+  description_column: "Item Description"
+  batch_size: 32
+
+logging:
+  enable: true
+  log_file: logs/hybrid_run_log.txt
